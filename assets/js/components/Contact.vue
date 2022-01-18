@@ -6,7 +6,7 @@
       <p class="text-white lead mb-0">Your local news provider!!!</p>
       <p class="text-white lead mb-4">Brought to you by News42.net</p>
     </header>
-    <h2>Add your contact details to our database</h2>
+    <p class="display-4 text-white">Add your contact details to our database</p>
     <content>
 
     </content>
