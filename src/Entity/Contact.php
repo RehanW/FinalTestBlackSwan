@@ -33,6 +33,9 @@ class Contact
     #[Assert\NotBlank]
     private $email;
 
+    #[ORM\Column(type: 'datetime_immutable')]
+    private $createdAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -82,6 +85,17 @@ class Contact
     public function setEmail(string $email): self
     {
         $this->email = $email;
+
+        return $this;
+    }
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
