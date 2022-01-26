@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 #[ApiResource]
 class Contact
 {
@@ -92,10 +93,10 @@ class Contact
     {
         return $this->createdAt;
     }
-
-    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    #[ORM\PrePersist]
+    public function setCreatedAt(): self
     {
-        $this->createdAt = $createdAt;
+        $this->createdAt = new \DateTimeImmutable();
 
         return $this;
     }
