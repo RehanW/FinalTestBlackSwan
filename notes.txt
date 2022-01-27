@@ -1,0 +1,7 @@
+.idea directory not ignored
+no .php-version file (not a biggy)
+
+first form submit - An exception occurred while executing a query: SQLSTATE[HY000]: General error: 1364 Field 'created_at' doesn't have a default value
+    - looks like the created_at field was a part of the entity at the time of creating the migration but was then removed at a later stage. Re-added it as the value would be useful in this instance
+
+Styling needs lots of love - but like the idea behind making it a news site and actually fetching news from an API rather than just blindly doing a contact form. 

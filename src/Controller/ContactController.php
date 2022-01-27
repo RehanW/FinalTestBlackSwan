@@ -36,6 +36,7 @@ class ContactController extends AbstractController
             $mailer->send($emailA);
             $mailer->send($emailC);
 
+            //TODO: Redirect the user to a useful page here
             return new Response('Contact id = ' . $contact->getId() . ' has been created for subscriber ' . $contact->getFirstName());
         }
 

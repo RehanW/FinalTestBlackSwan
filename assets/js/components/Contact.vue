@@ -8,7 +8,7 @@
     </header>
     <p class="display-4 text-white">Add your contact details to our database</p>
     <content>
-
+<!--  TODO: Implement form in VueJs and get it to post to the api endpoint. That will eliminate the need for the Symfony form in the view and make the application more expandable - eg for mobile apps etc.    -->
     </content>
 
   </div>
